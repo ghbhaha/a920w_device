@@ -17,8 +17,13 @@ endif
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
+# recovery
+PRODUCT_COPY_FILES += \
+    device/AMOI/A920W/ram_header:ram_header \
+
+
 $(call inherit-product, build/target/product/full.mk)
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_NAME := full_A920W
-PRODUCT_DEVICE := A920W
+PRODUCT_DEVICE := AMOI
